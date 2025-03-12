@@ -16,20 +16,20 @@ default = ["application"]
 # Feature required for argc the application. Should be disabled when depending on
 # argc as a library.
 application = [
-    "native-runtime",
-    "eval-bash",
-    "build",
-    "mangen",
-    "completions",
-    "compgen",
-    "export",
-    "wrap-help",
+  "native-runtime",
+  "eval-bash",
+  "build",
+  "mangen",
+  "completions",
+  "compgen",
+  "export",
+  "wrap-help",
 
-    # deps
-    "num_cpus",
-    "threadpool",
-    "base64",
-    "path-absolutize"
+  # deps
+  "num_cpus",
+  "threadpool",
+  "base64",
+  "path-absolutize",
 ]
 native-runtime = ["which"]
 eval = []

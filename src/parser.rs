@@ -6,6 +6,7 @@ use crate::utils::is_special_var_char;
 use crate::Result;
 
 use anyhow::bail;
+use nom::Parser;
 use nom::{
     branch::alt,
     bytes::complete::{escaped, tag, take_till, take_while1},
@@ -19,6 +20,7 @@ use nom::{
     sequence::{delimited, pair, preceded, separated_pair, terminated},
     Parser,
 };
+
 #[derive(Debug, PartialEq, Eq, Clone)]
 pub(crate) struct Event {
     pub(crate) data: EventData,
