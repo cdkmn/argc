@@ -5,7 +5,7 @@ def _argc_completer [args: list<string>] {
     | flatten 
    let is_empty = ($list | is-empty) or ((($list | length) == 1) and ($list | last | get value | is-empty))
 
-  if !$is_empty {
+  if not $is_empty {
     $list
   } 
 }
